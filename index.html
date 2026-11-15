@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GameAnalysis | كيف غيّرت التجارة الإلكترونية عالم الألعاب</title>
+<style>
+:root{--bg:#0a0a0c;--card:#15151a;--tx:#f2f2f5;--mut:#a0a3ad;--ac:#3d7bff;--ac2:#ff3b46;--bd:#26262e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0a0c;--card:#15151a;--tx:#f2f2f5;--mut:#a0a3ad;--ac:#3d7bff;--ac2:#ff3b46;--bd:#26262e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a0a0c;--card:#15151a;--tx:#f2f2f5;--mut:#a0a3ad;--ac:#3d7bff;--ac2:#ff3b46;--bd:#26262e;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Tahoma,"Noto Sans Arabic",Arial,sans-serif;line-height:1.85}
+main{max-width:720px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:1.9rem;line-height:1.4;margin:.5em 0 .3em}
+h2{font-size:1.3rem;margin:2em 0 .5em;color:var(--ac)}
+p{margin:.6em 0}.lead{color:var(--mut);font-size:1.05rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:14px 0}
+.tl{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}
+.tl button{flex:0 0 auto;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}
+.tl button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+#tlbox h3{margin:.2em 0}
+input[type=range]{width:100%;accent-color:var(--ac)}
+label{display:block;margin:.6em 0 .2em;font-size:.95rem}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:6px 0}
+.bar{height:14px;border-radius:7px;background:var(--ac);transition:width .3s}
+.bar.g{background:#8fb4ff}.bar.o{background:var(--ac2)}
+.big{font-size:1.5rem;font-weight:700}
+.note{font-size:.85rem;color:var(--mut)}
+.brand{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;background:#000;border-bottom:3px solid;border-image:linear-gradient(90deg,var(--ac),var(--ac2)) 1}
+.brand b{font-size:1.25rem;letter-spacing:.5px;color:#fff}.brand b span{color:var(--ac2)}.brand i{font-style:normal;font-size:.85rem;color:#c8cad2}
+h2{border-bottom:2px solid var(--ac2);padding-bottom:4px}
+footer{text-align:center;margin-top:40px;padding:18px 16px;background:#000;color:#c8cad2;font-size:.9rem;border-top:3px solid var(--ac)}
+footer b{color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+.pos{border-inline-start:4px solid var(--ac);padding-inline-start:10px}
+.neg{border-inline-start:4px solid var(--ac2);padding-inline-start:10px}
+svg{width:100%;height:auto;display:block}
+svg text{fill:var(--mut);font-size:11px;font-family:inherit}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main,.brand,footer{position:relative;z-index:1}
+h1{background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 6s linear infinite}
+@keyframes shift{to{background-position:-200% 0}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+.card:active{transform:scale(.985)}
+.tl button{transition:transform .2s,background .2s}.tl button:active{transform:scale(.92)}
+.play{background:var(--ac2);color:#fff;border:0;border-radius:999px;padding:6px 18px;font:inherit;cursor:pointer;margin-top:8px}
+#tlbox{cursor:grab;user-select:none;touch-action:pan-y}
+@media (prefers-reduced-motion:reduce){h1{animation:none}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<header class="brand"><b>Game<span>Analysis</span></b><i>بقلم محمد جمال زعرور</i></header>
+<main>
+<div class="note">مقال تفاعلي</div>
+<h1>🎮 كيف غيّرت التجارة الإلكترونية عالم الألعاب</h1>
+<p class="lead">قبل عقدين كانت اللعبة علبة تشتريها من محل. اليوم هي ملف تحمّله بضغطة زر. هذا التحول غيّر طريقة البيع والربح والنشر وحتى طريقة امتلاكنا للألعاب.</p>
+
+<h2>١. محطات غيّرت القواعد</h2>
+<div class="tl" id="tl"></div>
+<div class="card" id="tlbox"></div>
+<p class="note">👆 اسحب البطاقة يميناً أو يساراً للتنقل بين المحطات (أو استخدم أسهم الكيبورد).</p>
+
+<h2>٢. من العلبة إلى التحميل</h2>
+<p>حرّك المؤشر، أو اسحب إصبعك فوق الرسم، أو اضغط تشغيل لترى كيف تحوّل ميزان المبيعات بين النسخ الرقمية والفيزيائية.</p>
+<div class="card">
+<svg viewBox="0 0 320 170" id="chart" role="img" aria-label="رسم بياني لحصة المبيعات الرقمية"></svg>
+<label>السنة: <b id="yr">2015</b></label>
+<input type="range" id="yrs" min="2005" max="2025" step="1" value="2015">
+<div class="row"><span>🌐 رقمي</span><b id="dg"></b></div>
+<div class="bar" id="db"></div>
+<div class="row"><span>📦 فيزيائي</span><b id="ph"></b></div>
+<div class="bar o" id="pb"></div>
+<p class="note">الأرقام تقريبية وتوضيحية للاتجاه العام، وليست إحصاءات رسمية. النسبة تختلف بين الحاسوب (الأعلى رقمياً) والكونسول.</p>
+</div>
+
+<h2>٣. من يأخذ حصة كل بيعة؟</h2>
+<p>المتجر الرقمي يأخذ عمولة. جرّب كم يبقى للمطوّر حسب نسبة المنصة.</p>
+<div class="card">
+<label>سعر اللعبة: <b id="pv">20</b>$</label>
+<input type="range" id="price" min="5" max="70" step="1" value="20">
+<label>عدد النسخ المباعة: <b id="uv">10000</b></label>
+<input type="range" id="units" min="500" max="200000" step="500" value="10000">
+<div id="calc"></div>
+<p class="note">النسب المستخدمة: 30% (النموذج التقليدي في أغلب المتاجر)، 12% (Epic Games Store)، 10% (نسبة افتراضية قابلة للتعديل في itch.io). قد تتغير وتختلف حسب حجم الإيراد، وتستثني الضرائب ورسوم الدفع.</p>
+</div>
+
+<h2>٤. الأثر على الجميع</h2>
+<div class="grid">
+<div class="card pos"><b>للمطورين المستقلين</b><p>صاروا يوصلون لجمهور عالمي بدون ناشر ضخم ولا توزيع في المحلات.</p></div>
+<div class="card neg"><b>لكن</b><p>آلاف الألعاب تصدر كل سنة، فالظهور وسط الزحام صار التحدي الأكبر.</p></div>
+<div class="card pos"><b>للاعبين</b><p>تحميل فوري، تخفيضات موسمية، حزم ألعاب، واشتراكات مثل Game Pass.</p></div>
+<div class="card neg"><b>لكن</b><p>ما تملك اللعبة فعلياً غالباً، بل ترخيص استخدام. وقد تُسحب من المتجر.</p></div>
+<div class="card pos"><b>للناشرين</b><p>هوامش ربح أعلى بلا تصنيع وشحن، وبيانات دقيقة عن اللاعبين.</p></div>
+<div class="card neg"><b>للمتاجر الصغيرة</b><p>محلات الألعاب الفيزيائية خسرت جزءاً كبيراً من زبائنها، وتعتمد الآن على المستعمل والإكسسوارات.</p></div>
+</div>
+
+<h2>٥. خلاصة</h2>
+<div class="card">
+<p>التجارة الإلكترونية جعلت صناعة الألعاب أكثر انفتاحاً وسرعة، ووسّعت الباب أمام المبدعين الصغار، لكنها رفعت المنافسة وغيّرت معنى «الامتلاك». والاتجاه القادم يميل أكثر نحو الاشتراكات والبث السحابي.</p>
+</div>
+</main>
+<footer><b>GameAnalysis</b> · محمد جمال زعرور · جميع الحقوق محفوظة © 2026</footer>
+<script>
+var ev=[
+["2003","Steam","أطلقت Valve منصة Steam، وبدأت كأداة لتحديث ألعابها ثم صارت أكبر متجر ألعاب حاسوب."],
+["2008","App Store","فتح متجر تطبيقات آبل الباب لألعاب الجوال، وبدأ عصر الألعاب الصغيرة الرخيصة."],
+["2010","Humble Bundle","ظهرت حزم «ادفع ما تشاء» لصالح جهات خيرية، وغيّرت نظرة الناس لتسعير الألعاب."],
+["2013","itch.io","منصة مفتوحة تسمح لأي مطوّر بنشر لعبته بسهولة وتحديد نسبته."],
+["2017","Game Pass","اشتراك شهري يعطي مكتبة ألعاب كاملة، ومثّل تحولاً من الشراء إلى الاستئجار."],
+["2018","Epic Games Store","دخل منافس جديد بعمولة أقل (12%)، فضغط على المتاجر لمراجعة نسبها."]];
+var tl=document.getElementById('tl'),box=document.getElementById('tlbox');
+ev.forEach(function(e,i){var b=document.createElement('button');b.textContent=e[0];b.onclick=function(){sel(i)};tl.appendChild(b)});
+function sel(i){[].forEach.call(tl.children,function(b,j){b.className=j==i?'on':''});
+box.innerHTML='<h3>'+ev[i][1]+' ('+ev[i][0]+')</h3><p>'+ev[i][2]+'</p>'}
+sel(0);
+var pts=[[2005,5],[2010,20],[2015,45],[2020,75],[2025,90]];
+function dig(y){for(var i=0;i<pts.length-1;i++){if(y<=pts[i+1][0]){var a=pts[i],b=pts[i+1];return a[1]+(b[1]-a[1])*(y-a[0])/(b[0]-a[0])}}return 90}
+function X(y){return 20+(y-2005)/20*280}function Y(v){return 150-v*1.3}
+function draw(y){var s='';for(var g=0;g<=100;g+=25){s+='<line x1="20" x2="300" y1="'+Y(g)+'" y2="'+Y(g)+'" stroke="var(--bd)"/><text x="4" y="'+(Y(g)+4)+'">'+g+'</text>'}
+var d='';for(var k=2005;k<=2025;k++){d+=(k==2005?'M':'L')+X(k)+' '+Y(dig(k))}
+s+='<path d="'+d+'" fill="none" stroke="var(--ac)" stroke-width="2.5"/>';
+for(var t=2005;t<=2025;t+=5){s+='<text x="'+(X(t)-10)+'" y="166">'+t+'</text>'}
+s+='<circle cx="'+X(y)+'" cy="'+Y(dig(y))+'" r="6" fill="var(--ac2)"/>';
+document.getElementById('chart').innerHTML=s;
+var v=Math.round(dig(y));document.getElementById('yr').textContent=y;
+document.getElementById('dg').textContent=v+'%';document.getElementById('ph').textContent=(100-v)+'%';
+document.getElementById('db').style.width=v+'%';document.getElementById('pb').style.width=(100-v)+'%'}
+var ys=document.getElementById('yrs');ys.oninput=function(){draw(+ys.value)};draw(2015);
+var pr=document.getElementById('price'),un=document.getElementById('units');
+function calc(){var p=+pr.value,u=+un.value,t=p*u;
+document.getElementById('pv').textContent=p;document.getElementById('uv').textContent=u.toLocaleString('ar');
+var rows=[['عمولة 30%',.30,''],['عمولة 12%',.12,'g'],['عمولة 10%',.10,'g']],h='';
+rows.forEach(function(r){var net=t*(1-r[1]);h+='<div class="row"><span>'+r[0]+'</span><b>'+Math.round(net).toLocaleString('ar')+' $</b></div><div class="bar '+r[2]+'" style="width:'+(100*(1-r[1]))+'%"></div>'});
+document.getElementById('calc').innerHTML='<div class="note">إجمالي المبيعات: '+Math.round(t).toLocaleString('ar')+' $</div>'+h}
+pr.oninput=calc;un.oninput=calc;calc();
+// ===== حركة وإيماءات =====
+var cur=0,_sel=sel;sel=function(i){cur=i;_sel(i)};
+function go(d){var n=cur+d;if(n<0||n>=ev.length)return;sel(n);
+if(box.animate)box.animate([{transform:'translateX('+(d*50)+'px)',opacity:0},{transform:'none',opacity:1}],{duration:320,easing:'ease-out'});
+tl.children[n].scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'})}
+var sx=null;
+box.addEventListener('pointerdown',function(e){sx=e.clientX});
+box.addEventListener('pointerup',function(e){if(sx===null)return;var dx=e.clientX-sx;sx=null;if(Math.abs(dx)>40)go(dx<0?1:-1)});
+box.addEventListener('pointercancel',function(){sx=null});
+addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;if(e.key==='ArrowLeft')go(1);if(e.key==='ArrowRight')go(-1)});
+// سحب الإصبع فوق الرسم البياني لتغيير السنة
+var ch=document.getElementById('chart');ch.style.touchAction='pan-y';var dn=false;
+function pick(e){var r=ch.getBoundingClientRect(),fx=(e.clientX-r.left)/r.width*320,y=Math.round(2005+(fx-20)/280*20);y=Math.max(2005,Math.min(2025,y));ys.value=y;draw(y)}
+ch.addEventListener('pointerdown',function(e){dn=true;ch.setPointerCapture(e.pointerId);pick(e)});
+ch.addEventListener('pointermove',function(e){if(dn)pick(e)});
+ch.addEventListener('pointerup',function(){dn=false});
+ch.addEventListener('pointercancel',function(){dn=false});
+// زر تشغيل تلقائي
+ys.insertAdjacentHTML('afterend','<button class="play" id="pl">▶ تشغيل</button>');
+var tm=null;document.getElementById('pl').onclick=function(){var b=this;if(tm){clearInterval(tm);tm=null;b.textContent='▶ تشغيل';return}
+if(+ys.value>=2025)ys.value=2005;b.textContent='⏸ إيقاف';
+tm=setInterval(function(){var y=+ys.value+1;ys.value=y;draw(y);if(y>=2025){clearInterval(tm);tm=null;b.textContent='▶ تشغيل'}},450)};
+// ظهور تدريجي عند التمرير
+var els=document.querySelectorAll('h2,.card,.lead');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(l){l.forEach(function(t){if(t.isIntersecting){t.target.classList.add('in');io.unobserve(t.target)}})},{threshold:.12});
+els.forEach(function(el){el.classList.add('rv');io.observe(el)})}
+// خلفية متحركة: مربعات بكسل تطفو وتبتعد عن إصبعك أو الماوس
+(function(){var c=document.getElementById('bg'),x=c.getContext('2d'),W,H,P=[],m={x:-999,y:-999};
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(var i=0;i<42;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:5+Math.random()*12,v:.2+Math.random()*.7,r:Math.random()*6.28,c:Math.random()<.5?'#3d7bff':'#ff3b46'});
+addEventListener('pointermove',function(e){m.x=e.clientX;m.y=e.clientY});
+addEventListener('touchmove',function(e){var t=e.touches[0];if(t){m.x=t.clientX;m.y=t.clientY}},{passive:true});
+function f(){x.clearRect(0,0,W,H);
+P.forEach(function(p){p.y-=p.v;p.r+=.012;var dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy)||1;if(d<130){p.x+=dx/d*2.2;p.y+=dy/d*2.2}
+if(p.y<-30){p.y=H+30;p.x=Math.random()*W}
+x.save();x.translate(p.x,p.y);x.rotate(p.r);x.globalAlpha=.28;x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/2,p.s,p.s);x.restore()});
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)f()})();
+</script>
+</body>
+</html>
